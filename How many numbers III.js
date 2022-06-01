@@ -45,10 +45,10 @@ function findAll(sumDigits, numDigits) {
           for (let j = 0; j < numDigits - 1; j++) {
             if (parseInt(arrayTemp[j]) > parseInt(arrayTemp[j + 1]))
               conditional = false;
+              j = numDigits; //breaks loop
           }
           if (conditional === true){
             possibleSolutions.push(parseInt(i));
-            console.log(i);
           }
         }
     }
